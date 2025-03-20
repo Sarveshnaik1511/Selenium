@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-20T13:10:50 IST" name="Default suite" finished-at="2025-03-20T13:11:19 IST" duration-ms="28553">
+  <suite started-at="2025-03-21T01:18:09 IST" name="Default suite" finished-at="2025-03-21T01:18:11 IST" duration-ms="2513">
     <groups>
     </groups>
-    <test started-at="2025-03-20T13:10:50 IST" name="Default test" finished-at="2025-03-20T13:11:19 IST" duration-ms="28553">
-      <class name="udemyCource.GetAllpresentLinksFromTheWebpage">
-        <test-method signature="clickOnEachLink()[pri:0, instance:udemyCource.GetAllpresentLinksFromTheWebpage@7f0eb4b4]" started-at="2025-03-20T13:10:50 IST" name="clickOnEachLink" finished-at="2025-03-20T13:11:19 IST" duration-ms="28526" status="PASS">
+    <test started-at="2025-03-21T01:18:09 IST" name="Default test" finished-at="2025-03-21T01:18:11 IST" duration-ms="2513">
+      <class name="udemyCource.HandleCalender">
+        <test-method signature="selectDateAndVerify()[pri:0, instance:udemyCource.HandleCalender@77847718]" started-at="2025-03-21T01:18:09 IST" name="selectDateAndVerify" finished-at="2025-03-21T01:18:11 IST" duration-ms="2497" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnEachLink -->
-      </class> <!-- udemyCource.GetAllpresentLinksFromTheWebpage -->
+        </test-method> <!-- selectDateAndVerify -->
+      </class> <!-- udemyCource.HandleCalender -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

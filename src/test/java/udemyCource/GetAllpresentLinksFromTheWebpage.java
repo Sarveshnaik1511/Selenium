@@ -1,6 +1,8 @@
 package udemyCource;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -51,7 +53,7 @@ public class GetAllpresentLinksFromTheWebpage {
 //		int sizeOfLinks=links.size();
 	}
 	
-	@Test
+	@Test (enabled=false)
 	public void clickOnEachLink() throws InterruptedException {
 		WebDriver driver = Browser.launchBrowser("https://www.amazon.in/");
 		WebElement footer =driver.findElement(By.xpath("//div[@id='navFooter']"));
@@ -72,6 +74,34 @@ public class GetAllpresentLinksFromTheWebpage {
 		}
 		
 	}
+	
+	@Test
+	public void openEachLickAndGetTitle() throws InterruptedException {
+		WebDriver driver = Browser.launchBrowser("https://www.amazon.in/");
+		WebElement footer =driver.findElement(By.xpath("//div[@id='navFooter']"));
+		WebElement column= footer.findElement(By.xpath("(//div[@class='navFooterLinkCol navAccessibility'])[1]//ul"));
+		List<WebElement> links=column.findElements(By.tagName("a"));
+		int sizeOfLinks=links.size();
+		
+
+		for(int i=0;i<sizeOfLinks;i++) {
+			
+		String commandClick =	Keys.chord(Keys.COMMAND,Keys.ENTER);
+			links.get(i).sendKeys(commandClick);
+			Thread.sleep(6000);
+		}
+		
+	Set<String> windows =	driver.getWindowHandles();
+	Iterator<String> i=windows.iterator();
+	
+	while(i.hasNext()) {
+		driver.switchTo().window(i.next());
+		String title=driver.getTitle();
+		System.out.println(title);
+	}
+		
+	}
+	
 	
 	
 }
